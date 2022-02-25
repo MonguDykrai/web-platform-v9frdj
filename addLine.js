@@ -8,6 +8,10 @@ function addLine(id, x1, y1, x2, y2) {
   newLine.style.left = `${y1}px`;
   newLine.style.width = `${length}px`;
   newLine.style.transform = `rotate(${ang}deg)`;
+
+  newLine.addEventListener('click', (e) => {
+    console.log(e);
+  });
   canvas.appendChild(newLine);
 }
 
