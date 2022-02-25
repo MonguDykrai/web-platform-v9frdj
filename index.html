@@ -22,5 +22,22 @@
     </div>
     <script src="script.js"></script>
     <script src="./addLine.js"></script>
+
+    <script>
+      const container = document.getElementById('container');
+      const rect = container.getBoundingClientRect();
+      container.addEventListener('click', (e) => {
+        // console.log(e);
+        // console.log(e.layerX, e.layerY);
+        // console.log(e.offsetX, e.offsetY);
+        // console.log(e.pageX, e.pageY);
+        const pointX = e.pageX - rect.left;
+        const pointY = e.pageY - rect.top;
+        console.log({
+          pointX,
+          pointY,
+        });
+      });
+    </script>
   </body>
 </html>
